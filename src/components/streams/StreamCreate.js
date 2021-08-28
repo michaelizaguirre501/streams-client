@@ -14,7 +14,7 @@ class StreamCreate extends React.Component {
   }
 
   renderInput = ({ input, label, meta }) => {
-    console.log("~~form input props~~", input); //redux form automatically defines props and methods(handlers) to our form components
+    //redux form automatically defines props and methods(handlers) to our form components
     const className = `field ${meta.error && meta.touched ? "error" : " "}`;
     return (
       <div className={className}>
