@@ -1,5 +1,5 @@
 const INITAL_STATE = {
-  isSignedIn: false,
+  isSignedIn: null,
 };
 const authReducer = (state = INITAL_STATE, action) => {
   switch (action.type) {
