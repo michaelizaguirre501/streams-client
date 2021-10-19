@@ -28,7 +28,7 @@ class GoogleAuth extends Component {
   };
 
   onSignInClick = () => {
-    this.auth.signIn();
+    this.auth.signIn(this.auth.currentUser.get().getId());
   };
   onSignOutClick = () => {
     this.auth.signOut();
@@ -55,7 +55,6 @@ class GoogleAuth extends Component {
   }
 
   render() {
-    console.log(this.props);
     return <div className="item">{this.renderAuthButton()}</div>;
   }
 }
