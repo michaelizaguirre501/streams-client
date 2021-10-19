@@ -1,10 +1,10 @@
-import { SIGN_OUT, SIGN_IN } from "../actions/types";
+import { SIGN_IN, SIGN_OUT } from "../actions/types";
 
-const INITAL_STATE = {
+const INT_STATE = {
   isSignedIn: null,
   userId: null,
 };
-const authReducer = (state = INITAL_STATE, action) => {
+const authReducer = (state = INT_STATE, action) => {
   switch (action.type) {
     case SIGN_IN:
       return { ...state, isSignedIn: true, userId: action.payload };
