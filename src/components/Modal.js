@@ -5,7 +5,7 @@ import history from "../history";
 const Modal = (props) => {
   return ReactDOM.createPortal(
     <div
-      onClick={() => history.push(props.redirect)}
+      onClick={() => history.push("/")}
       className="ui dimmer modals visible active"
     >
       <div
@@ -14,10 +14,7 @@ const Modal = (props) => {
       >
         <div className="header">{props.header}</div>
         <div className="content">{props.content}</div>
-        <div className="actions">
-          <button className="ui button">Cancel</button>
-          <button className="ui primary button">Delete</button>
-        </div>
+        <div className="actions">{props.actions}</div>
       </div>
     </div>,
     document.querySelector("#modal")
